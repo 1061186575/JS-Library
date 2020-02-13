@@ -1,3 +1,4 @@
+// 格式化时间和日期
 
 function formatDate(inputTime = new Date()) {
     var date = new Date(inputTime);

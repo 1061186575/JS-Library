@@ -1,4 +1,4 @@
-
+﻿// 遍历HTML元素
 function traversalElement(elem, callback) {
     if (!elem) return;
     callback(elem);
