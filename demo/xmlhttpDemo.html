@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xmlhttp</title>
+</head>
+<body>
+    <script src="../xmlhttp.js"></script>
+    <script>
+        if (!/^https?:\/\//.test(window.location.href)) {
+            alert('请在服务器环境运行')
+        }
+
+        let url = 'https://javascript.info/';
+        // get请求
+        xmlhttp(url).then(response => {
+            console.log(response);
+            // document.body.innerHTML = response
+        })
+
+        // get请求加参数
+        xmlhttp(url, {
+            a: '123',
+            b: '456'
+        }).then(response => {
+            console.log(response);
+        })
+
+
+
+        // post请求
+        xmlhttp(url, {}, 'POST' ).then(response => {
+            console.log(response);
+        })
+        // post请求加参数
+        xmlhttp(url, {
+            a: '123',
+            b: '456'
+        }, 'POST').then(response => {
+            // console.log(response);
+            // document.body.innerHTML = response
+        })
+        
+        
+    </script>
+
+    
+</body>
+</html>
